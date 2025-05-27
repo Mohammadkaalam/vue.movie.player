@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import Navbar from '@/components/Navbar.vue';
+import App from '@/App.vue';
 </script>
 
 <template>
   <main>
-    <Navbar />
+    <App />
   </main>
 </template>
