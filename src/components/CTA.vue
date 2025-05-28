@@ -1,5 +1,5 @@
 <template>   
-<div class=" abc  top-0 p-4  ">
+<div class=" abc   p-4  ">
   <button class="btn btn-secondary back-button ">
     <i class="bi bi-arrow-left-short fs-4"></i>
     بازگشت
@@ -10,11 +10,9 @@
 <style>
 .abc {
   width: 100%;
-  max-width: 1440px;
   height: 64px;
   background-color:#222020; 
   display: flex;
-  justify-content: space-between;
   align-items: center;
   position: fixed;
   top: 0;

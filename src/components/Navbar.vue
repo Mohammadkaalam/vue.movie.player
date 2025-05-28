@@ -1,7 +1,7 @@
 <template>
 <nav class="custom-navbar d-flex align-items-center" dir="rtl">
     <!-- Right -->
-   <a class="navbar-brand text-white fw-bold d-flex align-items-center" href="#">فیلم ترسناک</a>
+   <a class="navbar-brand text-white fw-bold d-flex align-items-center bg-transparent" href="#">فیلم ترسناک</a>
     <!-- Center:  -->
     <ul class="navbar-nav flex-row gap-4 mb-0">
       <li class="nav-item" v-for="link in links" :key="link.title">
@@ -55,7 +55,8 @@ const links = [
 }
 
 .nav-link:hover {
-  color: #ff4444 !important;
+  color: #0f5194 !important;
+background-color: transparent;
 }
 
 img {
