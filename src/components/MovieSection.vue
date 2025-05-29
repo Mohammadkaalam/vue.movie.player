@@ -1,7 +1,7 @@
 <template>
-  <div class="container-fluid px-5 py-4" style="background-color: #222020">
+  <div class="container-fluid px-5" style="background-color: #222020">
     <div class="row">
-      <!-- Movie Info (Left) -->
+      <!-- Movie Info  -->
       <div class="col-md-4 text-white">
         <h2>{{ movie.title }}</h2>
         <p class="text-secondary">{{ movie.description }}</p>
@@ -28,7 +28,7 @@
         </div>
       </div>
 
-      <!-- Video Player (Right) -->
+      <!-- Video Player -->
 
       <div class="col-md-8">
         <video
@@ -37,7 +37,7 @@
           :src="selectedQuality"
           class="w-100 rounded"
           style="
-            background-image: url('/public/images/image.png');
+            background-image: url('assets\image\image.png');
             background-size: cover;
             background-position: center;
             min-height: 400px;

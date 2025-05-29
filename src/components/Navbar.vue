@@ -1,14 +1,14 @@
 <template>
 <nav class="custom-navbar d-flex align-items-center" dir="rtl">
-    <!-- Right -->
+    <!--R-->
    <a class="navbar-brand text-white fw-bold d-flex align-items-center bg-transparent" href="#">فیلم ترسناک</a>
-    <!-- Center:  -->
+    <!--C-->
     <ul class="navbar-nav flex-row gap-4 mb-0">
       <li class="nav-item" v-for="link in links" :key="link.title">
         <a class="nav-link text-white" href="#">{{ link.title }}</a>
       </li>
     </ul>
-    <!-- Left  -->
+    <!--L-->
     <div class="d-flex gap-3">
       <button class="btn btn-dark p-1.5 border-0">
         <i class="bi bi-search text-white fs-5 "></i>

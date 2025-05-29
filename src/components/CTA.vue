@@ -14,7 +14,6 @@
   background-color:#222020; 
   display: flex;
   align-items: center;
-  position: fixed;
   top: 0;
   left: 0;
   z-index: 1000;
