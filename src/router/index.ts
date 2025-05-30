@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import Loginform from '@/components/Loginform.vue'
 import MovieSection from '@/components/MovieSection.vue'
+import Loginform from '@/components/LoginForm.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -33,7 +33,7 @@ const router = createRouter({
       component: HomeView,
     },
     
-  ],      
+  ],    
 })
 
 export default router

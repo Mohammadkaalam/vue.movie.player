@@ -1,7 +1,6 @@
 <template>
   <div class="container-fluid px-5" style="background-color: #222020">
     <div class="row">
-      <!-- Movie Info  -->
       <div class="col-md-4 text-white">
         <h2>{{ movie.title }}</h2>
         <p class="text-secondary">{{ movie.description }}</p>
