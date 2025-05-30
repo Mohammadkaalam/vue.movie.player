@@ -37,7 +37,7 @@
           :src="selectedQuality"
           class="w-100 rounded"
           style="
-            background-image: url('assets\image\image.png');
+            background-image: url('assets/image/image.png');
             background-size: cover;
             background-position: center;
             min-height: 400px;
@@ -76,13 +76,15 @@ export default defineComponent({
 
     const fetchMovieData = async () => {
       try {
+        const token = localStorage.getItem('authToken')
+
         const response = await fetch(
           'https://run.mocky.io/v3/ca399b26-281f-4d69-b25c-21937b8c82a3',
           {
             headers: {
-              Authorization: 'Bearer your_jwt_token_here',
+              Authorization: 'Bearer ${token}',
             },
-          },
+          },          
         )
         const data = await response.json()
         movie.value = data
