@@ -12,7 +12,7 @@ const router = createRouter({
   },
   {
     path: '/login',
-    component: Loginform,
+    component: Loginform    ,
   },
   {
     path: '/movie',

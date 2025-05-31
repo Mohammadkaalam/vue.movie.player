@@ -16,8 +16,10 @@
 
     <div class="d-flex gap-3 position-relative align-items-center">
       <div class="d-flex d-md-none align-items-center gap-2">
-        <button class="btn btn-dark border-0 p-1">
-          <i class="bi bi-bell text-white fs-5"></i>
+        <button class="btn btn-dark border-0 p-1" @click="isNotified = !isNotified">
+          <i
+            :class="['fs-5', 'bi', isNotified ? 'bi-bell-fill text-warning' : 'bi-bell text-white']"
+          ></i>
         </button>
         <button class="btn btn-dark border-0 p-1" @click="toggleLogin">
           <i class="bi bi-person text-white fs-5"></i>
@@ -28,14 +30,20 @@
       </div>
 
       <div class="d-none d-md-flex gap-3 align-items-center">
-        <button class="btn btn-dark border-0">
-          <i class="bi bi-search text-white fs-5"></i>
+        <button class="btn btn-dark border-0" @click="isSearchActive = !isSearchActive">
+          <i
+            :class="['fs-5', 'bi', isSearchActive ? 'bi-search text-info' : 'bi-search text-white']"
+          ></i>
         </button>
-        <button class="btn btn-dark border-0">
-          <i class="bi bi-heart text-white fs-5"></i>
+        <button class="btn btn-dark border-0 w-100 mb-1" @click="liked = !liked">
+          <i
+            :class="['fs-5', 'bi', liked ? 'bi-heart-fill text-danger' : 'bi-heart text-white']"
+          ></i>
         </button>
-        <button class="btn btn-dark border-0">
-          <i class="bi bi-bell text-white fs-5"></i>
+        <button class="btn btn-dark border-0 p-1" @click="isNotified = !isNotified">
+          <i
+            :class="['fs-5', 'bi', isNotified ? 'bi-bell-fill text-warning' : 'bi-bell text-white']"
+          ></i>
         </button>
         <button class="btn btn-dark border-0" @click="toggleLogin">
           <i class="bi bi-person text-white fs-5"></i>
@@ -48,11 +56,22 @@
           class="mobile-icons-menu position-absolute"
           style="top: 40px; left: 0; z-index: 999"
         >
-          <button class="btn btn-dark border-0 w-100 mb-1">
-            <i class="bi bi-search text-white fs-5"></i>
+          <button
+            class="btn btn-dark border-0 w-100 mb-1"
+            @click="isSearchActive = !isSearchActive"
+          >
+            <i
+              :class="[
+                'fs-5',
+                'bi',
+                isSearchActive ? 'bi-search text-info' : 'bi-search text-white',
+              ]"
+            ></i>
           </button>
-          <button class="btn btn-dark border-0 w-100 mb-1">
-            <i class="bi bi-heart text-white fs-5"></i>
+          <button class="btn btn-dark border-0 w-100 mb-1" @click="liked = !liked">
+            <i
+              :class="['fs-5', 'bi', liked ? 'bi-heart-fill text-danger' : 'bi-heart text-white']"
+            ></i>
           </button>
         </div>
       </div>
@@ -80,6 +99,10 @@
 import Loginform from './LoginForm.vue'
 
 import { ref } from 'vue'
+const isSearchActive = ref(false)
+const liked = ref(false)
+
+const isNotified = ref(false)
 
 const showLogin = ref(false)
 const showMenu = ref(false)
