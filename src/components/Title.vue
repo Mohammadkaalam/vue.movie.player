@@ -2,7 +2,7 @@
   <div
     class="info-bar bg-dark text-white p-3 d-flex flex-wrap flex-md-nowrap align-items-center gap-3 gap-md-4"
   >
-    <div class="d-flex align-items-center gap-2 rating-container">
+    <div class="d-flex align-items-center gap-2 rating-container order-2 order-md-1">
       <button class="d-none d-md-block btn btn-dark border-0 p-1" style="background-color: #393b40">
         <i class="bi bi-share text-white fs-5"></i>
       </button>
@@ -18,17 +18,18 @@
         <i class="bi bi-star"></i>
         <i class="bi bi-star"></i>
       </div>
+      <div>
+        <select
+          class="d-none d-md-block form-select bg-secondary text-white border-0 quality-select"
+        >
+          <option selected>1080p - webdl</option>
+          <option>720p - webdl</option>
+          <option>480p - mp4</option>
+        </select>
+      </div>
     </div>
 
-    <div>
-      <select class="d-none d-md-block form-select bg-secondary text-white border-0 quality-select">
-        <option selected>1080p - webdl</option>
-        <option>720p - webdl</option>
-        <option>480p - mp4</option>
-      </select>
-    </div>
-
-    <div class="fw-bold fs-5 ms-auto ">EL CAMINO فیلم</div>
+    <div class="fw-bold fs-5 ms-auto orde-1 order-md-2">EL CAMINO فیلم</div>
   </div>
 </template>
 

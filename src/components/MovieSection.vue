@@ -1,7 +1,19 @@
 <template>
   <div class="container-fluid px-5" style="background-color: #222020">
     <div class="row">
-      <div class="col-md-4 text-white">
+     <div class="col-md-8 order-1 order-md-2 mb-4 mb-md-0">
+  <video
+    ref="videoPlayer"
+    controls
+    :src="selectedQuality"
+    poster="..\assets\image\image.png"   
+    class="w-100 rounded "
+    
+  ></video>
+</div>
+
+
+      <div class="col-md-4 text-white order-2 order-md-1 px-5">
         <h2>{{ movie.title }}</h2>
         <p class="text-secondary">{{ movie.description }}</p>
         <p>Year: {{ movie.releaseYear }}</p>
@@ -25,23 +37,7 @@
             </option>
           </select>
         </div>
-      </div>
-
-      <!-- Video Player -->
-
-      <div class="col-md-8">
-        <video
-          ref="videoPlayer"
-          controls
-          :src="selectedQuality"
-          class="w-100 rounded"
-          style="
-            background-image: url('assets/image/image.png');
-            background-size: cover;
-            background-position: center;
-            min-height: 400px;
-          "
-        ></video>
+        <hr style="border: none; border-top: 1px solid #ccc; margin: 10px 0" />
       </div>
     </div>
   </div>
@@ -83,7 +79,7 @@ export default defineComponent({
             headers: {
               Authorization: 'Bearer ${token}',
             },
-          },          
+          },
         )
         const data = await response.json()
         movie.value = data

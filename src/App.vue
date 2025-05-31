@@ -11,7 +11,7 @@ import Title from './components/Title.vue'
     <Navbar />
     <CTA />
     <Title />
-    <MovieSection/>
-    <DifferentPlayers/>
+    <MovieSection />
+    <DifferentPlayers />
   </div>
 </template>
